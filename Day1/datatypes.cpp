@@ -5,9 +5,9 @@ using namespace std;
 int main() 
 {
 /*
-keywords common for C and C++: 
+Data types common for C and C++: 
     char, int (short int), long, float, double, long double
-additional keywords in C++:
+additional data types in C++:
     char - for ASCII - supports 256 characters
     wchat_t - for Unicode - supports 65536 characters
 modifiers:
