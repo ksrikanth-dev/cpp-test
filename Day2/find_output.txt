@@ -1,0 +1,161 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+
+int main()
+{
+    int a=4728, b=0;
+    while(a != 0)
+    {
+        b = b *10 + a%10;
+        a /= 10;
+    }
+    cout<<b;
+}
+
+int main()
+{
+    int i=553;
+    while(i<=1000)
+        i++;
+    cout<<i;
+    return 0;
+}
+
+
+int main()
+{
+    int i=1, s=0;
+    while(1)
+    {
+        for(int x=1; x<=i; x++)
+        {
+            s+=x;
+        }
+        if(i>3)
+            break;
+        i++;
+    }
+    cout<<s;
+    return 0;
+}
+
+int main()
+{
+    int x=5, y=1, z=3, r=0;
+    if(x<10 || x>3)
+        r-=--x;
+    if(y<=5)
+        r--;
+    if(z != 2)
+        r--;
+    cout<<r;
+    return 0;
+}
+
+int main()
+{
+    int result = 6-3*2+7-9/2;
+    cout<<result;
+}
+
+int main()
+{
+    int x, s=0, n=0;
+    for(int i=1; i<=9; i++)
+    {
+        cout<<"enter a number: ";
+        cin>>x;
+        if(x%3==0 && x<10)
+        {
+            s+=x;
+            n++;
+        }
+        if(x==0)
+            break;
+    }
+    cout<<s<<endl<<n;
+}
+
+int main()
+{
+    int i=1, sum=0;
+    while(i<=10)
+    {
+        switch(i%5)
+        {
+            case 0:
+                sum += i;
+            case 1:
+                sum += i;
+            case 3:
+                sum += i;
+            case 2:
+                break;
+            default:
+                sum = 0;
+        }
+        i+=3;
+    }
+    cout<<++sum;
+    return 0;
+}
+
+
+int main()
+{
+    int x=0;
+    for(int i=1; i<=9; i++)
+    {
+        i += i %3;
+        x += i;
+    }
+    cout<<x;
+
+
+    return 0;
+}
+
+int main()
+{
+    int x=1, y=3, z;
+    z = x*10 + y*5;
+    cout<<z;
+}
+
+int main()
+{
+    const double PI = 3.1416;
+    const double d2r = PI/180.0;
+    double f1, f2, x = 90, y=4;
+    f1= pow(sin(x*d2r),2) + pow(cos(x*d2r),2);
+    f2 = pow(y, 2) / y + 1;
+    f2 *= f1 + (int) (f2/y);
+    cout<<f1 + f2;
+}
+
+int main()
+{
+    int a = 12, b, c=8;
+    if(a>=5 && a<=10)
+        b = a+ --c;
+    else
+        b = ++c;
+    c = a>b?b++:c++;
+    
+    cout<<a<<" "<<b<<" "<<c;
+}
+
+int main()
+{
+    const int SC=3;
+    int a=25, b=2;
+    if(a%10 + b/10 > SC) {
+        b *= a % 10 +a;
+    } else {
+        b *= a;
+    }
+    cout<<b;
+}
