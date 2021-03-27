@@ -38,7 +38,7 @@ extern ->
 - The extern modifier is most commonly used when there are two or more files sharing the same global variables or functions.
 
 register ->
-- The register storage class is used to define local variables that should be stored in a register instead of RAM. This means that the variable has a maximum size equal to the register size (usually one word) and can't have the unary '&' operator applied to it (as it does not have a memory location).
+- The register storage class is used to define local variables that should be stored in a register instead of RAM. This means that the variable has a maximum size equal to the register size (usually one word) and can't have the unary '&' operator applied to it (as it does not have a memory location).  
     {  
         register int  miles;  
     }  
