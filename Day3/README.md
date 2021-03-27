@@ -48,5 +48,7 @@ mutable ->
 - The mutable specifier applies only to class data members.
 - Sometimes there is a requirement to modify one or more data members of class/struct through const function even though we don’t want the function to update other members of class/struct. This task can be easily performed by using the mutable keyword. The keyword mutable is mainly used to allow a particular data member of const object to be modified. When we declare a function as const, `this` pointer passed to function becomes const. Adding mutable to a variable allows a const pointer to change members.
 - That is, a mutable member can be modified by a const member function/through a const object.
+![image](https://user-images.githubusercontent.com/47342068/112732947-13b38b00-8f63-11eb-9b34-7c8a4c91328a.png)
+
 
 
