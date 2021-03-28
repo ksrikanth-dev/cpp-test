@@ -77,4 +77,12 @@ b) Difficult to debug as they cause simple replacement.
 c) Macro don’t have namespace, so a macro in one section of code can affect other section.
 d) Macros can cause side effects as shown in CUBE() example.
 
+**Macro:**
+*******
+- Macros are a piece of code in a program which is given some name. Whenever this name is encountered by the compiler, the compiler replaces the name with the actual piece of code. In short, macros are used to specify - `this needs to be replaced with that`
+- The '#define' directive is used to define a macro.
+- Macros are pre-processed (preprocessing takes place at the initial stage of compilation) which means that all the macros would be processed before the program compiles.
+- There are instances where macro usage might look like a function call, but please be cautious that both are two different things. This would be covered in examples.
+- Here are tbe differences between macro and function:
+![image](https://user-images.githubusercontent.com/47342068/112739073-c816d680-8f8e-11eb-8c70-6486fb56fa8f.png)
 
