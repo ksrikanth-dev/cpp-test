@@ -71,5 +71,10 @@ Storage classes:**
 
       volatile int some_int = 100; //note the 'volatile' qualifier now!
 - With the variable declared as volatile, compiler will not do the optimization. So, on each iteration of the while loop, compiler will check the value of `some_int` to see if it's 100 or not instead of assuming that 'it would be 100 anyways'.
+- Macros are no longer recommended as they cause following issues. There is a better way in modern compilers that is inline functions and const variable. Below are disadvantages of macros:
+a) There is no type checking
+b) Difficult to debug as they cause simple replacement.
+c) Macro don’t have namespace, so a macro in one section of code can affect other section.
+d) Macros can cause side effects as shown in CUBE() example.
 
 
