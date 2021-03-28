@@ -51,4 +51,23 @@ mutable ->
 ![image](https://user-images.githubusercontent.com/47342068/112732947-13b38b00-8f63-11eb-9b34-7c8a4c91328a.png)
 
 
+Volatile qualifier:
+******************
+- volatile is a type qualifier not a storage class specifier, so it does not determine storage location at all; it affects the definition of a variable's type, not its storage.
 
+- Consider this code,
+
+  int some_int = 100;
+
+  while(some_int == 100)
+  {
+    //your code
+  }
+  When this program gets compiled, the compiler may optimize this code, if it finds that the program never ever makes any attempt to change the value of some_int, so it may be tempted to optimize the while loop by changing it from while(some_int == 100) to something which is equivalent to while(true) so that the execution could be fast (since the condition in while loop appears to be true always). (if the compiler doesn't optimize it, then it has to fetch the value of some_int and compare it with 100, in each iteration which obviously is a little bit slow.)
+
+- However, sometimes, optimization (of some parts of your program) may be undesirable, because it may be that someone else is changing the value of some_int from outside the program which compiler is not aware of, since it can't see it; but it's how you've designed it. In that case, compiler's optimization would not produce the desired result!
+
+So, to ensure the desired result, you need to somehow stop the compiler from optimizing the while loop. That is where the volatile keyword plays its role. All you need to do is this,
+
+  volatile int some_int = 100; //note the 'volatile' qualifier now!
+- With the variable declared as volatile, compiler will not do the optimization. So, on each iteration of the while loop, compiler will check the value of `some_int` to see if it's 100 or not instead of assuming that 'it would be 100 anyways'.
