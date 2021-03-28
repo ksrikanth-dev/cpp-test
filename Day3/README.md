@@ -85,4 +85,8 @@ d) Macros can cause side effects as shown in CUBE() example.
 - There are instances where macro usage might look like a function call, but please be cautious that both are two different things. This would be covered in examples.
 - Here are tbe differences between macro and function:
 ![image](https://user-images.githubusercontent.com/47342068/112739073-c816d680-8f8e-11eb-8c70-6486fb56fa8f.png)
-
+- Macros are no longer recommended as they cause following issues. There is a better way in modern compilers that is inline functions and const variable. Below are disadvantages of macros:
+a) There is no type checking
+b) Difficult to debug as they cause simple replacement.
+c) Macro don’t have namespace, so a macro in one section of code can affect other section.
+d) Macros can cause side effects as shown in CUBE() example.
