@@ -1,0 +1,35 @@
+Write programs using loops to print the following patterns - one program per pattern
+pattern 1 -
+    *                                                                                        
+   **                                                                                        
+  ***                                                                                        
+ ****                                                                                        
+*****
+
+pattern 2 -
+    *                                                                                        
+   ***                                                                                       
+  *****                                                                                      
+ *******                                                                                     
+*********                                                                                    
+ *******                                                                                     
+  *****                                                                                      
+   ***                                                                                       
+    *
+
+pattern 3 -
+    A                                                                                        
+   ABA                                                                                       
+  ABCBA                                                                                      
+ ABCDCBA                                                                                     
+ABCDEDCBA
+
+pattern 4 -
+
+Enter a number: 6                                                                            
+1                                                                                            
+1 2                                                                                          
+1 2 3                                                                                        
+1 2 3 4                                                                                      
+1 2 3 4 5
+1 2 3 4 5 6
