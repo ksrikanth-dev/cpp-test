@@ -26,7 +26,10 @@ It is, however, not guaranteed that a copy constructor will be called in all the
 - It is a compiler optimization that involves eliminating the temporary object created to hold a function's return value. RVO is allowed to change the observable behaviour of the resulting program by the C++ standard.  
 - In general, the C++ standard allows a compiler to perform any optimization, provided the resulting executable exhibits the same observable behaviour as if (i.e. pretending) all the requirements of the standard have been fulfilled. This is commonly referred to as the "as-if rule". The term return value optimization refers to a special clause in the C++ standard that goes even further than the "as-if" rule: an implementation may omit a copy operation resulting from a return statement, even if the copy constructor has side effects.  
 - The following example demonstrates a scenario where the implementation may eliminate one or both of the copies being made, even if the copy constructor has a visible side effect (printing text).[1] The first copy that may be eliminated is the one where a nameless temporary C could be copied into the function f's return value. The second copy that may be eliminated is the copy of the temporary object returned by f to obj.  
-![image](https://user-images.githubusercontent.com/47342068/114327861-65aa0280-9b58-11eb-9fd9-98307594e036.png)
+  
+![image](https://user-images.githubusercontent.com/47342068/114327924-ac97f800-9b58-11eb-8eb3-022b8f873bd0.png)
+
+
 
 
 
