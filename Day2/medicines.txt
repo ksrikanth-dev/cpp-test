@@ -1,0 +1,3 @@
+Paracetamol    14    10.5
+Aspirin    20    15.2
+Navalgin    5    11.9
